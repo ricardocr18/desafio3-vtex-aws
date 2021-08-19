@@ -1,0 +1,18 @@
+{
+  "store.home": { 
+    "blocks": [
+      "slider-layout#home",
+      "rich-text"      
+    ]
+  },
+
+ 
+  "rich-text": { 
+    "props": { 
+      "text": "Olá Mundo",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "font": "t-heading-1"
+    }
+  }
+}
