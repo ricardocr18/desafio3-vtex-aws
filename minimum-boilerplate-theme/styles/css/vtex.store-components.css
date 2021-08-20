@@ -1,0 +1,7 @@
+
+.imageElement{
+    cursor: pointer;
+    display: block;
+    overflow: hidden;
+    border-radius: 20px;
+}
