@@ -63,12 +63,17 @@
 
   "product-summary.shelf#lp": {
     "children": [
+      "modal-trigger#lp",
       "product-summary-name",
       "product-images#lp",
       "vtex.product-highlights@2.x:product-highlights",
-      "vtex.product-highlights@2.x:product-highlights"
-      //"product-summy-price",
-    ]
+      "vtex.product-highlights@2.x:product-highlights",
+      "product-summary-price",
+      "add-to-cart-button#lp"
+    ],
+    "props":{
+      "blockClass":["tricolor", "Coração"]
+    }
   },
 
   "product-images#lp":{
@@ -86,6 +91,45 @@
       "message": "Pré Lançamento"
     }
   },
+
+  "add-to-cart-button#lp":{
+    "props":{
+      "onClickBehavior": "go-to-product-page",
+      "text": "Ver Novidades"
+    }
+  },
+
+  "modal-trigger#lp":{
+    "children": [
+      "rich-text#lp",
+      "modal-layout#lp"
+    ]
+  },
+
+  "rich-text#lp":{
+    "props":{
+      "text":"Aoba"
+    }
+  },
+
+  "modal-layout#lp":{
+    "children":[
+      "video#lp"
+    ]
+  },
+
+  "video#lp":{
+    "props": {
+      "width": "100%",
+      "height": "600px",
+      "loop": false,
+      "autoPlay": true,
+      "muted": false,
+      "src": "https://www.youtube.com/watch?v=wygFqZXMIco",
+      "blockClass": "videoEl"
+    }
+  },
+
 
 
 

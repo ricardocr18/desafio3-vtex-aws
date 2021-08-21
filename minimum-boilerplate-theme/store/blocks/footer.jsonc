@@ -14,13 +14,13 @@
   },
   "flex-layout.row#footer": { 
     "children": [
-      "image"
+      "rich-text#Footer"
     ]
   },
-  "image": {
-    "props": {
-      "width": 100,
-      "src": "https://brand.vtex.com/static/media/VTEX_pink_RGB.751a9fb5.svg"
+  
+  "rich-text#Footer":{
+    "props":{
+      "text":"Footer"
     }
   }
 }
