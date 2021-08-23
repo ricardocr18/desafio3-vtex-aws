@@ -48,7 +48,11 @@
     "vtex.add-to-cart-button": "0.x",
     "vtex.product-highlights": "2.x",
     "vtex.modal-layout": "0.x",
-    "vtex.store-video": "1.x"
+    "vtex.store-video": "1.x",
+    "vtex.product-price": "1.x",
+    "vtex.store-image": "0.x",
+    "vtex.checkout-summary": "0.x",
+    "vtex.condition-layout": "1.x"
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }

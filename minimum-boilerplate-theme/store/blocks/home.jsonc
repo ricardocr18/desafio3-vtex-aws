@@ -1,24 +1,35 @@
 {
   "store.home": { 
     "blocks": [
-      "tab-layout#home",
-      "slider-layout#depBanner",
-      "search-result-layout.customQuery#home",
-      "rich-text"      
+      
+    "tab-layout#home",
+    "slider-layout#depBanner",    
+    "search-result-layout.customQuery#home",
+    "flex-layout.row#rodape",
+     "flex-layout.row#footermobile",
+     "flex-layout.col#entrar",
+     "flex-layout.col#desafios",
+      "flex-layout.col#loja",
+      "flex-layout.col#suporte"
+      
+      
     ]
   },
-
+  
+ 
   // Configurações do serch-result
   "search-result-layout.customQuery#home": {
+    "blocks": ["search-result-layout.desktop#lp",
+       "search-result-layout.mobile"],
     "props": {
       "querySchema": {
         "skusFilter": "FIRST_AVAILABLE",
         "simulationBehavior": "skip",
-        "maxItemsPerPage": 8
+        "maxItemsPerPage": 8,
+        "queryField": "kit-upmedal",
+        "mapField": "c"
       }
-    },
-
-    "blocks": ["search-result-layout.desktop#lp", "search-result-layout.mobile"]
+    }    
   },
 
   "search-result-layout.desktop#lp":{
@@ -32,7 +43,8 @@
 
   "search-content#lp":{
     "blocks": [
-      "gallery#lp", "not-found"
+      "gallery#lp", 
+      "not-found"
     ]
   },
 
@@ -45,9 +57,9 @@
           "component": "GridSummary",
           "itemsPerRow":{
             "(min-width:1300px)": 4,
-            "desktop": 3,
-            "tablet": 3,
-            "phone": 2
+            "desktop": 2,
+            "tablet": 2,
+            "phone": 1
           }
         },
         {
@@ -63,16 +75,16 @@
 
   "product-summary.shelf#lp": {
     "children": [
-      "modal-trigger#lp",
-      "product-summary-name",
+     "modal-trigger#lp",
+      //"product-summary-name",
       "product-images#lp",
       "vtex.product-highlights@2.x:product-highlights",
-      "vtex.product-highlights@2.x:product-highlights",
-      "product-summary-price",
+      //"vtex.product-highlights@2.x:product-highlights",
+     "product-summary-price",
       "add-to-cart-button#lp"
     ],
     "props":{
-      "blockClass":["tricolor", "Coração"]
+      "blockClass":["tricolor", "coracao"]
     }
   },
 
@@ -95,14 +107,15 @@
   "add-to-cart-button#lp":{
     "props":{
       "onClickBehavior": "go-to-product-page",
-      "text": "Ver Novidades"
+      "text": "Ver Detalhes"
+      
     }
   },
 
   "modal-trigger#lp":{
     "children": [
-      "rich-text#lp",
-      "modal-layout#lp"
+      "rich-text#lp"
+     // "modal-layout#lp"
     ]
   },
 
@@ -110,8 +123,8 @@
     "props":{
       "text":"Aoba"
     }
-  },
-
+  }, 
+/*
   "modal-layout#lp":{
     "children":[
       "video#lp"
@@ -131,7 +144,7 @@
   },
 
 
-
+*/
 
 
 
@@ -142,10 +155,12 @@
   "tab-layout#home": {
     "children": ["tab-list#home", "tab-content#home"]
   },
+
   "tab-list#home": {
     "children": ["tab-list.item#home1", "tab-list.item#home2", "tab-list.item#home3",
       "tab-list.item#home4", "tab-list.item#home5", "tab-list.item#home6", "tab-list.item#home7"]
   },
+
   "tab-list.item#home1": {
     "props": {
       "tabId": "promocao",
@@ -212,22 +227,21 @@
   },
   "rich-text#home1": {
     "props": {
-      "text": "Área do conteúdo da tab-list.item com tabId = Promoção",
+     // "text": "Área do conteúdo da tab-list.item com tabId = Promoção",
       "textPosition": "CENTER",
       "font": "t-heading-3"
     }
   },
   "rich-text#home2": {
     "props": {
-      "text": "Área do conteúdo da tab-list.item com tabId = livros",
+     // "text": "Área do conteúdo da tab-list.item com tabId = livros",
       "textPosition": "CENTER",
       "font": "t-heading-3"
     }
   },
   
+
   // Aqui começa as imagens do banner principal
-
-
 
   "slider-layout#depBanner": {
     "props": {
@@ -254,16 +268,8 @@
       "src": "assets/GUERREIROS.png",
       "width": 800
     }
-  },
-   
-// Aqui o Olá Mundo
-
-  "rich-text": { 
-    "props": { 
-      "text": "Olá Mundo",
-      "textAlignment": "CENTER",
-      "textPosition": "CENTER",
-      "font": "t-heading-1"
-    }
   }
+   
+
+
 }

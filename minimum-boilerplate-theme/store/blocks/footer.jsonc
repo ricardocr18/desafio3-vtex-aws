@@ -1,4 +1,4 @@
-{
+/*{
   "footer": {
     "blocks": ["footer-layout.desktop", "footer-layout.mobile"]
   },
@@ -12,15 +12,192 @@
       "flex-layout.row#footer"
     ]
   },
-  "flex-layout.row#footer": { 
+  
+  "flex-layout.row#footer": {
     "children": [
-      "rich-text#Footer"
+      "rich-text#footer1",
+      "rich-text#footer2",
+      "rich-text#footer3",
+      "rich-text#footer4"
     ]
   },
-  
-  "rich-text#Footer":{
+  "rich-text#footer1": {
+    "props": {
+      "text": "ENTRAR",
+      "blockClass": "footer",
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#footer2": {
+    "props": {
+      "text": "DESAFIOS",
+      "blockClass": "footer",
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#footer3": {
+    "props": {
+      "text": "LOJA",
+      "blockClass": "footer",
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#footer4": {
+    "props": {
+      "text": "SUPORTE",
+      "blockClass": "footer",
+      "textPosition": "CENTER"
+    }
+  }
+}
+
+*/
+//=======================================
+
+{
+  "footer": {
+    "blocks": [
+      "footer-layout.desktop", 
+      "footer-layout.mobile"]
+  },
+  "footer-layout.desktop": { 
+    "children": [
+      "flex-layout.row#rodape"
+    ]
+  },
+  "footer-layout.mobile": { 
+    "children": [
+      "flex-layout.row#footermobile"
+    ]
+  },
+  "flex-layout.row#rodape":{
     "props":{
-      "text":"Footer"
+      "blockClass":"rodape",
+      "fullWidth": true,
+      "paddingTop": 3
+    },
+    "children": [
+      "image"
+    ]
+  },
+  /*
+  "image": {
+    "props": {
+      "width": 100,
+      "src": "assets/logo.png"
+    }
+  }, */
+  "flex-layout.row#footermobile": { 
+    "props": {
+      "blockClass": "footer-mobile",
+      "fullWidth": true,
+      "horizontalAlign": "center",
+      "verticalAlign": "top",
+      "preserveLayoutOnMobile": true,
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": false,
+      "colSizing": "equal"
+    },
+    "children": [
+      "flex-layout.col#entrar",
+      "flex-layout.col#desafios",
+      "flex-layout.col#loja",
+      "flex-layout.col#suporte"
+    ]
+  },
+  "flex-layout.col#entrar":{
+    "props":{
+      "horizontalAlign": "center"
+    },
+    "children":[
+        "image#login",
+        "rich-text#login"
+    ]
+  },
+  "image#login": {
+    "props": {
+      "width": 30,
+      "src": "assets/user.png",
+      "link": "/"      
+    }
+  },
+  "rich-text#login": {
+    "props": {
+      "text": "ENTRAR",
+      "textPosition": "CENTER",
+      "font": "mini"
+      
+    }
+  },
+  "flex-layout.col#desafios":{
+    "props":{
+      "horizontalAlign": "center"
+    },
+    "children":[
+        "image#desafios",
+        "rich-text#desafios"
+    ]
+  },
+  "image#desafios": {
+    "props": {
+      "width": 30,
+      "src": "assets/trophy.png",
+      "link": "/"
+    }
+  },
+  "rich-text#desafios": {
+    "props": {
+      "text": "DESAFIOS",
+      "textPosition": "CENTER",
+      "font": "mini"
+    }
+  },
+  "flex-layout.col#loja":{
+    "props":{
+      "horizontalAlign": "center"
+    },
+    "children":[
+        "image#loja",
+        "rich-text#loja"
+    ]
+  },
+  "image#loja": {
+    "props": {
+      "width": 30,
+      "src": "assets/carrinho.png",
+      "link": "/"
+    }
+  },
+  "rich-text#loja": {
+    "props": {
+      "text": "LOJA",
+      "textPosition": "CENTER",
+      "font": "mini"
+    }
+  },
+  "flex-layout.col#suporte":{
+    "props":{
+      "horizontalAlign": "center"
+    },
+    "children":[
+        "image#suporte",
+        "rich-text#suporte"
+    ]
+  },
+  "image#suporte": {
+    "props": {
+      "width": 30,
+      "src": "assets/whatsapp.png",
+      "link": {
+        "url": "https://api.whatsapp.com/send?phone=5561993981535&text=Desafio%20Vtex"
+      }
+    }
+  },
+  "rich-text#suporte": {
+    "props": {
+      "text": "SUPORTE",
+      "textPosition": "CENTER",
+      "font": "mini"
     }
   }
 }
